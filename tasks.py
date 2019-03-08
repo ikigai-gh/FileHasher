@@ -7,4 +7,5 @@ app = Celery('FileHasherTasks', broker='redis://localhost')
 
 @app.task
 def calc_file_md5(url):
-    return compute_md5(download_file(url))
+    compute_md5(download_file(url))
+    return calc_file_md5.request.id
