@@ -2,3 +2,4 @@ flask
 celery
 requests
 redis
+flask-emails
