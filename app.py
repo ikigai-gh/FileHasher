@@ -32,8 +32,8 @@ def submit():
 
     task_info = {}
 
-    mail_from = (email, email)
-    mail_to = (flask_app.config['EMAIL_HOST_USER'], flask_app.config['EMAIL_HOST_USER'])
+    mail_from = ('foo', flask_app.config['EMAIL_HOST_USER'])
+    mail_to = ('foo', email)
 
     if url:
         if email:
