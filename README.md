@@ -1,9 +1,16 @@
 ## FileHasher
 
-### Instructions for run:
+### Install & start redis
 ```bash
 sudo apt install redis
 sudo systemctl start redis
+```
+
+### Presettings:
+In the file `flask_conf.py` specify your own settings for email sending
+
+### Instructions for run:
+```bash
 cd FileHasher
 virtualenv env
 source env/bin/activate
