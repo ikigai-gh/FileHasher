@@ -8,16 +8,7 @@ import json
 from utils import compute_md5, download_file, send_email as email
 
 flask_app = Flask(__name__)
-
-flask_app.config['EMAIL_HOST'] = 'smtp.gmail.com'
-flask_app.config['EMAIL_PORT'] = 587
-flask_app.config['EMAIL_USE_TLS'] = True
-flask_app.config['EMAIL_HOST_USER'] = ''
-flask_app.config['EMAIL_HOST_PASSWORD'] = ''
-flask_app.config['CELERY_BROKER_URL'] = 'redis://localhost:6379'
-flask_app.config['CELERY_RESULT_BACKEND'] = 'redis://localhost:6379'
-
-flask_app.app_context()
+flask_app.config.from_object('flask_conf.Config')
 
 celery_app = make_celery(flask_app)
 
