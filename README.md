@@ -2,8 +2,8 @@
 
 ### Install & start redis
 ```bash
-sudo apt install redis
-sudo systemctl start redis
+sudo apt install redis-server
+sudo systemctl start redis-server
 ```
 
 ### Presettings:
